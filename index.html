@@ -12,7 +12,10 @@
 </head>
 <body>
     <div class="add">
-        <button class="add-btn">Add New Book</button>
+    <button class="add-btn">Add New Book</button>
+    </div>
+    <div id="book-shelf">
+        <!-- added books will go here in js -->
     </div>
     <div class="window"> 
         <div class="book-form">
@@ -30,12 +33,20 @@
                 <input type="number" id="pages" placeholder="100">
             </div>
             <div class="book">
-                <input type="checkbox" id="has-read">
-                <label for="has-read">I have already read this book.</label>
+                <h2>Have you read this book?</h2>
+                <div class="radio-options">
+                    <label for="has-read">Yes</label>
+                    <input type="radio" id="has-read" name="read-status" value="yes">
+                    <label for="not-read">No</label>
+                    <input type="radio" id="not-read" name="read-status" value="no">
+                </div>
+
+
             </div>
             <div class="form-buttons">
                 <button id="cancel-btn">Cancel</button>
                 <button id="submit-btn">Submit</button>
+                <button id="clear-btn">Clear</button>
             </div>
         </div>
     </div>
