@@ -1,4 +1,3 @@
-const header = document.querySelector('header');
 const addButton = document.querySelector('.add-btn');
 const addContainer = document.querySelector('.add');
 const bookForm = document.querySelector('.book-form');
@@ -11,6 +10,8 @@ const authorInput = document.getElementById('author');
 const pagesInput = document.getElementById('pages');
 const hasReadInput = document.querySelector('input[name="read-status"]:checked');
 const bookShelf = document.getElementById('book-shelf');
+const footer = document.querySelector('footer');
+
 
 let bookLibrary = [];
 
@@ -27,6 +28,7 @@ addButton.addEventListener('click', e => {
     const hideAddBtn = addButton.style.display = "none";
     const hideAddContainer = addContainer.style.display = "none";
     const hideBookShelf = bookShelf.style.display = "none";
+    const showFooter = footer.style.display = "block";
 })
 submitBtn.addEventListener('click', addToLibrary);
 clearBtn.addEventListener('click', clearForm);
@@ -103,5 +105,6 @@ function closeForm() {
     const showAddBtn = addButton.style.display = "block";
     const showAddContainer = addContainer.style.display = "block";
     const hideBookShelf = bookShelf.style.display = "grid";
+    const showFooter = footer.style.display = "none";
     clearForm();
 }
